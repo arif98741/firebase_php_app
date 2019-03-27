@@ -8,6 +8,10 @@ class Users {
     protected $database;
     protected $dbname;
 
+    /*
+     * Constructor Load First
+     * @param table name
+     * */
     public function __construct($dbname){
         $this->dbname = $dbname ;
 
@@ -17,6 +21,10 @@ class Users {
     }
 
 
+    /*
+    * Get Specific Data or ALl
+    * @param id
+    * */
     public function get(int $userID = NULL){
         if (empty($userID) || !isset($userID)) { return FALSE; }
         if ($this->database->getReference($this->dbname)->getSnapshot()->hasChild($userID)){
@@ -26,6 +34,10 @@ class Users {
         }
     }
 
+    /*
+    * Insert Data
+    * @param data array
+    * */
     public function insert(array $data) {
         if (empty($data) || !isset($data)) { return FALSE; }
         foreach ($data as $key => $value){
@@ -35,6 +47,10 @@ class Users {
     }
 
 
+    /*
+    * Delete Specific Data From Table
+    * @param userid
+    * */
     public function delete(int $userID) {
         if (empty($userID) || !isset($userID)) { return FALSE; }
         if ($this->database->getReference($this->dbname)->getSnapshot()->hasChild($userID)){
