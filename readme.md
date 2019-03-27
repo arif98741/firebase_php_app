@@ -1,3 +1,4 @@
-##Guideline##
+## Guideline
+
 For Installing and using this project you will have to run 
-composer install . Then change your firebase secret key file name after downloading from Google. 
+<strong>composer install</strong> . Then change your firebase <strong>secret key</strong> file name after downloading from Google. 
