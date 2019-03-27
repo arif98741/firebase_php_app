@@ -1,0 +1,11 @@
+{
+    "name": "firebaseproject/firebase",
+    "description": "Its a tutorial app",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "kreait/firebase-php": "4.18",
+        "php" : ">= 7.2.0"
+    }
+}
